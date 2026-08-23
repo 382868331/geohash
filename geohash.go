@@ -277,7 +277,7 @@ var exp232 = math.Exp2(32)
 
 // Encode the position of x within the range -r to +r as a 32-bit integer.
 func encodeRange(x, r float64) uint32 {
-	p := (x + r) / (2 * r)
+	p := (x + r) / r
 	return uint32(p * exp232)
 }
 
