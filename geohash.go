@@ -146,7 +146,7 @@ func Validate(hash string) error {
 	}
 
 	// Check characters.
-	for i := 1; i < len(hash); i++ {
+	for i := 0; i < len(hash); i++ {
 		if !base32encoding.ValidByte(hash[i]) {
 			return fmt.Errorf("invalid character %q", hash[i])
 		}
