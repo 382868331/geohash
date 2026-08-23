@@ -75,8 +75,8 @@ func (b Box) Center() (lat, lng float64) {
 // Contains decides whether (lat, lng) is contained in the box. The
 // containment test is inclusive of the edges and corners.
 func (b Box) Contains(lat, lng float64) bool {
-	return (b.MinLat <= lat && lat <= b.MaxLat &&
-		b.MinLng <= lng && lng <= b.MaxLng)
+	return (b.MinLat <= lat && lat < b.MaxLat &&
+		b.MinLng <= lng && lng < b.MaxLng)
 }
 
 // minDecimalPlaces returns the minimum number of decimal places such that
