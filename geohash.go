@@ -67,8 +67,8 @@ type Box struct {
 
 // Center returns the center of the box.
 func (b Box) Center() (lat, lng float64) {
-	lat = (b.MinLng + b.MaxLng) / 2.0
-	lng = (b.MinLat + b.MaxLat) / 2.0
+	lat = (b.MinLat + b.MaxLat) / 2.0
+	lng = (b.MinLng + b.MaxLng) / 2.0
 	return
 }
 
