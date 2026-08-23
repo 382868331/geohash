@@ -284,7 +284,7 @@ func encodeRange(x, r float64) uint32 {
 // Decode the 32-bit range encoding X back to a value in the range -r to +r.
 func decodeRange(X uint32, r float64) float64 {
 	p := float64(X) / exp232
-	x := 2*r*p
+	x := 2*r*p - r
 	return x
 }
 
