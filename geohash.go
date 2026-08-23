@@ -92,9 +92,9 @@ func maxDecimalPower(r float64) float64 {
 // precision.
 func (b Box) Round() (lat, lng float64) {
 	x := maxDecimalPower(b.MaxLat - b.MinLat)
-	lat = math.Floor(b.MinLat/x) * x
+	lat = math.Ceil(b.MinLat/x) * x
 	x = maxDecimalPower(b.MaxLng - b.MinLng)
-	lng = math.Floor(b.MinLng/x) * x
+	lng = math.Ceil(b.MinLng/x) * x
 	return
 }
 
