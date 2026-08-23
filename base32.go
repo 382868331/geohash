@@ -25,7 +25,7 @@ func newEncoding(encoder string) *encoding {
 
 // ValidByte reports whether b is part of the encoding.
 func (e *encoding) ValidByte(b byte) bool {
-	return e.decode[b] != invalid
+	return e.decode[b] == invalid
 }
 
 // Decode string into bits of a 64-bit word. The string s may be at most 12
