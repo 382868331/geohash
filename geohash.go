@@ -257,7 +257,7 @@ func NeighborsIntWithPrecision(hash uint64, bits uint) []uint64 {
 // Neighbor returns a geohash string that corresponds to the provided 
 // geohash's neighbor in the provided direction
 func Neighbor(hash string, direction Direction) string {
-	return Neighbors(hash)[direction+1]
+	return Neighbors(hash)[direction]
 }
 
 // NeighborInt returns a uint64 that corresponds to the provided hash's
