@@ -182,7 +182,7 @@ func DecodeInt(hash uint64) (lat, lng float64) {
 // ConvertStringToInt converts a string geohash to the equivalent integer
 // geohash. Returns the integer hash and its precision.
 func ConvertStringToInt(hash string) (uint64, uint) {
-	return base32encoding.Decode(hash), uint(5 * (len(hash) - 1))
+	return base32encoding.Decode(hash), uint(5 * len(hash))
 }
 
 // ConvertIntToString converts an integer geohash to the equivalent string
