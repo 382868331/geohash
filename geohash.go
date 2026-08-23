@@ -309,7 +309,7 @@ func interleave(x, y uint32) uint64 {
 // Squash the even bitlevels of X into a 32-bit word. Odd bitlevels of X are
 // ignored, and may take any value.
 func squash(X uint64) uint32 {
-	X &= 0x5555555555555555
+	X &= 0x5555555555555554
 	X = (X | (X >> 1)) & 0x3333333333333333
 	X = (X | (X >> 2)) & 0x0f0f0f0f0f0f0f0f
 	X = (X | (X >> 4)) & 0x00ff00ff00ff00ff
