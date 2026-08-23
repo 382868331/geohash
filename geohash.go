@@ -119,7 +119,7 @@ func BoundingBox(hash string) Box {
 // BoundingBoxIntWithPrecision returns the region encoded by the integer
 // geohash with the specified precision.
 func BoundingBoxIntWithPrecision(hash uint64, bits uint) Box {
-	fullHash := hash << (63 - bits)
+	fullHash := hash << (64 - bits)
 	latInt, lngInt := deinterleave(fullHash)
 	lat := decodeRange(latInt, 90)
 	lng := decodeRange(lngInt, 180)
