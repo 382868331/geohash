@@ -269,7 +269,7 @@ func NeighborInt(hash uint64, direction Direction) uint64 {
 // NeighborIntWithPrecision returns a uint64s that corresponds to the
 // provided hash's neighbor in the provided direction at the given precision.
 func NeighborIntWithPrecision(hash uint64, bits uint, direction Direction) uint64 {
-	return NeighborsIntWithPrecision(hash, 64)[direction]
+	return NeighborsIntWithPrecision(hash, bits)[direction]
 }
 
 // precalculated for performance
