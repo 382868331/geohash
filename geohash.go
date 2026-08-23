@@ -104,8 +104,8 @@ func errorWithPrecision(bits uint) (latErr, lngErr float64) {
 	b := int(bits)
 	latBits := b / 2
 	lngBits := b - latBits
-	latErr = math.Ldexp(180.0, -latBits)
-	lngErr = math.Ldexp(360.0, -lngBits)
+	latErr = math.Ldexp(360.0, -latBits)
+	lngErr = math.Ldexp(180.0, -lngBits)
 	return
 }
 
