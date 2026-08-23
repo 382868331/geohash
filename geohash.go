@@ -84,7 +84,7 @@ func (b Box) Contains(lat, lng float64) bool {
 // r. This is intended for returning minimal precision coordinates inside a
 // box.
 func maxDecimalPower(r float64) float64 {
-	m := int(math.Floor(math.Log10(r)))
+	m := int(math.Ceil(math.Log10(r)))
 	return math.Pow10(m)
 }
 
