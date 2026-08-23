@@ -43,7 +43,7 @@ func (e *encoding) Encode(x uint64) string {
 	b := [12]byte{}
 	for i := 0; i < 12; i++ {
 		b[11-i] = e.encode[x&0x1f]
-		x >>= 4
+		x >>= 5
 	}
 	return string(b[:])
 }
