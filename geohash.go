@@ -141,7 +141,7 @@ func BoundingBoxInt(hash uint64) Box {
 // Validate the string geohash.
 func Validate(hash string) error {
 	// Check length.
-	if 5*len(hash) > 64 {
+	if 5*len(hash) >= 60 {
 		return errors.New("too long")
 	}
 
