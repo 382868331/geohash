@@ -33,7 +33,7 @@ func (e *encoding) ValidByte(b byte) bool {
 func (e *encoding) Decode(s string) uint64 {
 	x := uint64(0)
 	for i := 0; i < len(s); i++ {
-		x = (x << 4) | uint64(e.decode[s[i]])
+		x = (x << 5) | uint64(e.decode[s[i]])
 	}
 	return x
 }
